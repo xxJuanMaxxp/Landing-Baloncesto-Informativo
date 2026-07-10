@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades del Baloncesto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="importancia.html">Importancia</a>
+        <a href="historia.html">Historia</a>
+        <a href="reglas.html">Reglas</a>
+        <a href="leyendas.html">Leyendas</a>
+        <a href="curiosidades.html">Curiosidades</a>
+        <a href="galeria.html">Galería</a>
+        <a href="videos.html">Videos</a>
+
+    </nav>
+
+    <header>
+        <h1>Curiosidades del Baloncesto</h1>
+    </header>
+
+<section>
+    <section id="curiosidades">
+  <h2>🤩 Curiosidades del Baloncesto 🏀</h2>
+  <div class="curiosidades-container">
+    
+    <!-- Imagen izquierda -->
+    <img src="img/balon.jpg" alt="Balón de baloncesto" class="decoracion izquierda">
+
+    <!-- Carta central -->
+    <div class="flashcard" id="flashcard">
+      <p id="flashcard-text">🏀 El balón de baloncesto pesa entre 567 y 650 gramos.</p>
+    </div>
+
+    <!-- Imagen derecha -->
+    <img src="img/aro.png" alt="Aro de baloncesto" class="decoracion derecha">
+  </div>
+</section>
+
+<style>
+#curiosidades {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  color: white;
+}
+
+.curiosidades-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* espacio entre carta e imágenes */
+  margin-top: 30px;
+}
+
+/* Imágenes decorativas */
+.decoracion {
+  width: 200px;  /* tamaño fijo */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  transition: transform 0.4s ease;
+}
+
+.decoracion:hover {
+  transform: scale(1.1) rotate(5deg); /* efecto divertido */
+}
+
+/* Carta */
+.flashcard {
+  width: 500px;   /* ⚠️ muy grande, revisa si querías 405px en vez de 4050 */
+  height: 220px;
+  background: linear-gradient(135deg, #ff6f00, #ffcc00);
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease, background 0.8s ease;
+}
+
+.flashcard:hover {
+  transform: rotateY(10deg) scale(1.05);
+  background: linear-gradient(135deg, #ff4800, #ffc107);
+}
+
+#flashcard-text {
+  padding: 20px;
+  transition: opacity 0.5s ease;
+}
+</style>
+
+<script>
+// Lista de curiosidades
+const curiosidades = [
+  "⏱️ El partido más largo de la NBA duró 78 minutos.",
+  "🥇 La primera canasta de la historia fue en 1891.",
+  "🌍 El baloncesto es uno de los deportes más jugados en el mundo.",
+  "🏀 Michael Jordan ganó 6 campeonatos con los Chicago Bulls.",
+  "🔥 Kobe Bryant anotó 81 puntos en un solo partido en 2006."
+];
+
+let index = 0;
+const flashcard = document.getElementById("flashcard");
+const text = document.getElementById("flashcard-text");
+
+// Evento: cambiar curiosidad al hacer clic
+flashcard.addEventListener("click", () => {
+  text.style.opacity = 0; // desaparece
+  setTimeout(() => {
+    index = (index + 1) % curiosidades.length;
+    text.textContent = curiosidades[index];
+    text.style.opacity = 1; // aparece con efecto
+  }, 400);
+});
+</script>
+
+</section>
+
+
+    <footer>
+        © 2025 - Baloncesto: Puro Estilo
+    </footer>
+
+</body>
+</html>

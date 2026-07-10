@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Importancia del Baloncesto</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Fondo dinámico */
+    body {
+      font-family: 'Bebas Neue', cursive;
+      background: linear-gradient(135deg,#0f2027, #203a43, #2c5364);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      animation: backgroundMove 10s infinite alternate;
+    }
+    @keyframes backgroundMove {
+      from { background-position: left; }
+      to { background-position: right; }
+    }
+
+    /* Encabezado con efecto neón */
+    header h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin: 20px 0;
+      color: #ffcc00;
+      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff6600, 0 0 30px #ff3300;
+      animation: neonPulse 2s infinite;
+    }
+    @keyframes neonPulse {
+      0%, 100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff6600; }
+      50% { text-shadow: 0 0 20px #ff3300, 0 0 40px #ff0000; }
+    }
+
+    /* Subtítulos animados */
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 30px;
+      animation: slideIn 2s ease;
+    }
+    @keyframes slideIn {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    /* Texto con efecto máquina de escribir */
+    .typewriter {
+      overflow: hidden;
+      border-right: .15em solid orange;
+      white-space: nowrap;
+      margin: 20px auto;
+      letter-spacing: .1em;
+      animation:
+        typing 4s steps(40, end),
+        blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange; }
+    }
+
+    /* Blockquote con rebote */
+    blockquote {
+      font-style: italic;
+      text-align: center;
+      margin: 30px auto;
+      padding: 15px;
+      border-left: 5px solid orange;
+      animation: bounce 3s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* Botón animado */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 20px auto;
+      font-size: 1rem;
+      color: #fff;
+      background: linear-gradient(90deg, #ff6600, #ff3300);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      animation: pulse 1.5s infinite;
+      text-decoration: none;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Contenedor */
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    nav {
+      background: #000;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #ffcc00;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #111;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="importancia.html">Importancia</a>
+    <a href="historia.html">Historia</a>
+    <a href="reglas.html">Reglas</a>
+    <a href="leyendas.html">Leyendas</a>
+    <a href="curiosidades.html">Curiosidades</a>
+    <a href="galeria.html">Galería</a>
+    <a href="videos.html">Videos</a>
+    
+  </nav>
+
+  <header>
+    <h1>🌟 La Importancia del Baloncesto 🌟</h1>
+  </header>
+
+  <section>
+    <h2>🌍 Más que un deporte</h2>
+    <p class="typewriter">
+     El baloncesto inspira valores como 
+      el esfuerzo, la amistad y el trabajo en equipo.
+    </p>
+
+    <blockquote>
+      "El baloncesto es un puente que une culturas, generaciones y sueños bajo un mismo balón." 🏀
+    </blockquote>
+
+    <h2>💪 Beneficios personales</h2>
+    <p>
+      Mejora la condición física, la rapidez mental y la coordinación. 
+      Cada partido es una lección de vida en movimiento.
+    </p>
+
+   <p id="extra" style="display:none;">
+  El baloncesto ayuda a desarrollar resiliencia, fomenta la igualdad y ha sido 
+  un motor de cambio social en muchas comunidades alrededor del mundo.
+</p>
+
+<a href="#" class="btn" onclick="document.getElementById('extra').style.display='block'; this.style.display='none';">
+  Leer más
+</a>
+
+
+    <h2>🤝 Impacto social</h2>
+    <p>
+      En las comunidades, el baloncesto crea lazos, inspira a jóvenes 
+      y convierte las canchas en espacios de unión.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 - Baloncesto: Puro Estilo
+  </footer>
+</body>
+</html>

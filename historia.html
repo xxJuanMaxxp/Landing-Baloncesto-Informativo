@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia del Baloncesto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="importancia.html">Importancia</a>
+        <a href="historia.html">Historia</a>
+        <a href="reglas.html">Reglas</a>
+        <a href="leyendas.html">Leyendas</a>
+        <a href="curiosidades.html">Curiosidades</a>
+        <a href="galeria.html">Galería</a>
+        <a href="videos.html">Videos</a>
+
+    </nav>
+
+    <header>
+        <h1>Historia del Baloncesto</h1>
+    </header>
+
+    <section>
+        <img src="img/historia-baloncesto.jpg" alt="James Naismith inventando el baloncesto" class="historia-img">
+   <section id="historia">
+  <h2>📜 Historia del Baloncesto 🏀</h2>
+  <div class="historia-box">
+    <p id="historia-text"></p>
+  </div>
+</section>
+
+<style>
+#historia {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #12252e, #2c5364);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.historia-box {
+  margin: 40px auto;
+  width: 80%;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  font-size: 20px;
+  line-height: 1.6;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animación de aparición/desaparición */
+#historia-text {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+</style>
+
+<script>
+const parrafos = [
+  "El baloncesto fue inventado en 1891 por James Naismith, un profesor de educación física en Springfield, Massachusetts. 🏀",
+  "El objetivo inicial era mantener a los estudiantes activos durante el invierno, utilizando un balón y dos canastas de melocotones como aros. 🍑",
+  "Con el tiempo, el deporte creció y se convirtió en uno de los más populares a nivel mundial. 🌍🔥"
+];
+
+let indexHistoria = 0;
+const historiaText = document.getElementById("historia-text");
+
+function mostrarHistoria() {
+  // Desaparece
+  historiaText.style.opacity = 0;
+
+  setTimeout(() => {
+    // Cambia al siguiente párrafo
+    historiaText.textContent = parrafos[indexHistoria];
+    historiaText.style.opacity = 1;
+
+    // Avanza al siguiente
+    indexHistoria = (indexHistoria + 1) % parrafos.length;
+  }, 1000); // espera 1s para desaparecer
+}
+
+// Mostrar primer párrafo de inmediato
+mostrarHistoria();
+
+// Cambiar cada 5 segundos
+setInterval(mostrarHistoria, 5000);
+</script>
+
+    </section>
+
+    <footer>
+        © 2025 - Baloncesto: Puro Estilo
+    </footer>
+
+</body>
+</html>

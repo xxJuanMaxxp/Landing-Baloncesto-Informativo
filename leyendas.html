@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyendas del Baloncesto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="importancia.html">Importancia</a>
+        <a href="historia.html">Historia</a>
+        <a href="reglas.html">Reglas</a>
+        <a href="leyendas.html">Leyendas</a>
+        <a href="curiosidades.html">Curiosidades</a>
+        <a href="galeria.html">Galería</a>
+        <a href="videos.html">Videos</a>
+
+    </nav>
+
+    <header>
+        <h1>Leyendas del Baloncesto</h1>
+    </header>
+
+<div class="leyendas-section">
+  <!-- Imagen izquierda -->
+  <img src="img/leyendas-baloncesto.jpg" alt="Jordan Dunk" class="side-img">
+
+  <!-- Texto giratorio en el centro -->
+  <div class="leyenda-card" id="leyendaCard">
+    <div class="leyenda-inner">
+      <div class="leyenda-front">
+        <p>🏀 <b>Michael Jordan</b> - Ícono de los Chicago Bulls, 6 veces campeón de la NBA.</p>
+      </div>
+      <div class="leyenda-back">
+        <p>🏀 <b>Kobe Bryant</b> - Leyenda de los Lakers con una mentalidad Mamba.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Imagen derecha -->
+  <img src="img/leyendas-baloncesto.jpg" alt="Jordan Dunk" class="side-img">
+</div>
+
+<style>
+.leyendas-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 80px;
+}
+
+.side-img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.leyenda-card {
+  width: 500px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.leyenda-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.leyenda-card.flipped .leyenda-inner {
+  transform: rotateY(180deg);
+}
+
+.leyenda-front, .leyenda-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, #0f1e255d, #2c4f5e);
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leyenda-back {
+  transform: rotateY(180deg);
+}
+</style>
+
+<script>
+const leyendas = [
+  "🏀 <b>Michael Jordan</b> - Ícono de los Chicago Bulls, 6 veces campeón de la NBA.",
+  "🏀 <b>Kobe Bryant</b> - Leyenda de los Lakers con una mentalidad Mamba.",
+  "🏀 <b>LeBron James</b> - El rey del juego moderno, aún activo.",
+  "🏀 <b>Stephen Curry</b> - Revolucionó el baloncesto con el tiro de tres puntos."
+];
+
+let index = 0;
+const card = document.getElementById("leyendaCard");
+const front = card.querySelector(".leyenda-front p");
+const back = card.querySelector(".leyenda-back p");
+
+setInterval(() => {
+  card.classList.toggle("flipped");
+
+  setTimeout(() => {
+    if (card.classList.contains("flipped")) {
+      back.innerHTML = leyendas[index % leyendas.length];
+    } else {
+      front.innerHTML = leyendas[index % leyendas.length];
+    }
+    index++;
+  }, 500);
+}, 4000);
+</script>
+
+
+    <footer>
+        © 2025 - Baloncesto: Puro Estilo
+    </footer>
+
+</body>
+</html>

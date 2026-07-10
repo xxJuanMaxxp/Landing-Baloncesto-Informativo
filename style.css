@@ -1,0 +1,439 @@
+body {
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 🔹 Estilo único y limpio del menú */
+nav a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #ff6f00;
+    transform: scale(1.2); /* agranda un poco */
+}
+
+nav a:active {
+    transform: scale(0.95); /* se achica al presionar */
+}
+
+header {
+    background-image: url('img/banner-baloncesto.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-size: 64px;
+    color: #ffcc00;
+    text-shadow: 3px 3px 10px black;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section {
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+section h2 {
+    color: #ff6f00;
+    font-size: 32px;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: "🏀 ";
+    padding-left: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.gallery img {
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+}
+
+/* Imagen de la historia */
+.historia-img {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    float: right;
+    margin: 0 0 15px 15px;
+    position: relative;
+    top: 200px;
+}
+
+.img-lateral {
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    float: right;
+    margin: 0 0 15px 15px;
+    position: relative;
+    top: 130px;
+}
+
+.img-inicio {
+    width: 200px;
+    max-width: 100%;
+    height: 104px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    float: right;
+    margin: 0 0 15px 15px;
+    position: relative;
+    top: -15px;
+}
+.img-secundaria {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    float: right;
+    margin: 0 15px 15px 0;
+    position: relative;
+    top: -80px;
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.video-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+.video-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    transition: transform 0.3s;
+}
+
+.video-item img:hover {
+    transform: scale(1.05);
+}
+
+.video-thumb {
+    width: 280px;
+    height: 160px;
+    object-fit: contain;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    transition: transform 0.3s;
+}
+
+.video-thumb:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.player-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.player-card {
+  position: relative;
+  width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+.player-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Overlay de información */
+.player-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 2px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.player-info h3 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.player-info p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.player-card:hover .player-info {
+  opacity: 1; /* aparece el fondo con la info */
+}
+
+.player-card {
+  width: 280px;      /* puedes ajustar el tamaño */
+  height: 400px;     /* este controla la altura del recuadro */
+  border-radius: 12px;
+  overflow: hidden;  /* evita que la imagen se salga del borde redondeado */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.player-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* ajusta la imagen al tamaño del recuadro */
+  display: block;
+}
+
+nav a {
+  color: #ffcc00;
+  position: relative;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #ffcc00;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+nav a {
+  color: #ffcc00;
+  text-decoration: none;
+  padding: 10px 16px;
+  transition: all 0.4s ease;
+}
+
+nav a:hover {
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  color: black;
+  border-radius: 6px;
+  transform: translateY(-3px); /* pequeño salto hacia arriba */
+}
+
+/* Tarjeta principal */
+.welcome-card {
+  width: 90%;
+  max-width: 1000px;
+  height: 300px;
+  margin: 50px auto;
+  perspective: 1000px;
+}
+
+.welcome-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.welcome-card:hover .welcome-inner {
+  transform: rotateY(180deg);
+}
+
+/* Caras */
+.welcome-front,
+.welcome-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Imagen frontal */
+.welcome-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Parte trasera */
+.welcome-back {
+  background: linear-gradient(135deg, #1a2a6c, #fdbb2d);
+  color: white;
+  display: flex;               /* ACTIVAMOS FLEXBOX */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  transform: rotateY(180deg);
+}
+
+/* Texto */
+.welcome-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.welcome-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.welcome-text p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Imagen en reverso */
+.welcome-img img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+#reglas {
+  text-align: center;
+  padding: 30px;
+  background: #1e3d4e;
+  border-radius: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+}
+
+.regla {
+  opacity: 0;
+  white-space: nowrap;
+  position: relative;
+  margin: 20px 0;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.right {
+  animation-name: slideRight;
+}
+
+.left {
+  animation-name: slideLeft;
+}
+
+@keyframes slideRight {
+  0%   { transform: translateX(100%); opacity: 0; }
+  10%  { opacity: 1; }
+  40%  { transform: translateX(0); opacity: 1; }
+  60%  { transform: translateX(0); opacity: 1; }
+  90%  { opacity: 0; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes slideLeft {
+  0%   { transform: translateX(-100%); opacity: 0; }
+  10%  { opacity: 1; }
+  40%  { transform: translateX(0); opacity: 1; }
+  60%  { transform: translateX(0); opacity: 1; }
+  90%  { opacity: 0; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
