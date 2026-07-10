@@ -22,4 +22,4 @@ además con elementos interactivos que permiten una navegacion mas entretenida y
 ## Autor:
 ### Juan Manuel Ortiz Orjuela
 Programa: Análisis y Desarrollo de Software (ADSO)
-*SENA*
+## SENA
