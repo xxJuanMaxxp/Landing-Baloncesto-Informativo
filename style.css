@@ -34,7 +34,7 @@ nav a:active {
 }
 
 header {
-    background-image: url('img/banner-baloncesto.jpg');
+    background-image: url('banner-baloncesto.jpg');
     background-size: cover;
     background-position: center;
     height: 300px;
